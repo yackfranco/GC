@@ -1,0 +1,41 @@
+18
+20
+17
+30
+33
+34
+35
+38
+
+BD
+1
+2
+3
+6
+7
+9
+10
+11
+13
+14
+18
+20
+17
+30
+
+1. traer el id menor del excel y preguntar si esta en la base de datos (LISTO)
+2. si no esta: agregar todos los del documento (LISTO)
+3. si si esta: entonces preguntar uno por uno si esta en la base de datos para ir agregandolos.
+
+
+segunda opcion
+
+1. traer el id menor del excel y preguntar si esta en la base de datos (LISTO)
+2. si no esta: agregar todos los del documento (LISTO)
+3. si si esta: preguntar cual es el mayor en la base de datos, ir y comparar al excel, y de ahi en adelante agregar los registros
+
+
+
+
+
+
