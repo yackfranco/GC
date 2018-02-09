@@ -15,7 +15,8 @@ namespace Datos
         //Objetos de conexion
         public static SqlCommand comando = new SqlCommand();
         public static SqlCommand comando2 = new SqlCommand();
-        public static SqlConnection conexion = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=" + Application.StartupPath.ToString() + @"\DatosBD.mdf");
+        //public static SqlConnection conexion = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=" + Application.StartupPath.ToString() + @"\DatosBD.mdf");
+        public static SqlConnection conexion = new SqlConnection(Properties.Settings.Default.BDGC);
         public static SqlDataReader lector = null;  
 
         //Metodos en Logica
