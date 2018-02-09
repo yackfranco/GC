@@ -48,5 +48,11 @@ namespace Presentacion
             RegistrarDiplomados rd = new RegistrarDiplomados();
             rd.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RegistrarCursos rc = new RegistrarCursos();
+            rc.ShowDialog();
+        }
     }
 }

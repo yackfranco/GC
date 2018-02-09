@@ -32,7 +32,6 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EditarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.panelDatos = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +45,7 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(72, 173);
+            this.NuevoButton.Location = new System.Drawing.Point(101, 172);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(62, 63);
             this.NuevoButton.TabIndex = 0;
@@ -56,7 +55,7 @@
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(153, 173);
+            this.GuardarButton.Location = new System.Drawing.Point(182, 172);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(62, 63);
             this.GuardarButton.TabIndex = 0;
@@ -66,7 +65,7 @@
             // 
             // EditarButton
             // 
-            this.EditarButton.Location = new System.Drawing.Point(313, 173);
+            this.EditarButton.Location = new System.Drawing.Point(342, 172);
             this.EditarButton.Name = "EditarButton";
             this.EditarButton.Size = new System.Drawing.Size(62, 63);
             this.EditarButton.TabIndex = 1;
@@ -76,7 +75,7 @@
             // 
             // CancelarButton
             // 
-            this.CancelarButton.Location = new System.Drawing.Point(232, 173);
+            this.CancelarButton.Location = new System.Drawing.Point(261, 172);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(62, 63);
             this.CancelarButton.TabIndex = 2;
@@ -84,18 +83,9 @@
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
-            // BuscarButton
-            // 
-            this.BuscarButton.Location = new System.Drawing.Point(481, 173);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(62, 63);
-            this.BuscarButton.TabIndex = 3;
-            this.BuscarButton.Text = "Buscar";
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(400, 173);
+            this.EliminarButton.Location = new System.Drawing.Point(429, 172);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(62, 63);
             this.EliminarButton.TabIndex = 4;
@@ -149,11 +139,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 253);
+            this.dataGridView1.Location = new System.Drawing.Point(170, 256);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(538, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(278, 269);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
@@ -161,16 +153,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 442);
+            this.ClientSize = new System.Drawing.Size(649, 537);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelDatos);
-            this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.EditarButton);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Name = "RegistrarDiplomados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarDiplomados";
             this.Load += new System.EventHandler(this.RegistrarDiplomados_Load);
             this.panelDatos.ResumeLayout(false);
@@ -186,7 +178,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EditarButton;
         private System.Windows.Forms.Button CancelarButton;
-        private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Panel panelDatos;
         private System.Windows.Forms.Label label2;
