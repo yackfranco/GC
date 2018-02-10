@@ -54,5 +54,11 @@ namespace Presentacion
             RegistrarCursos rc = new RegistrarCursos();
             rc.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RegistrarAsesores ra = new RegistrarAsesores();
+            ra.ShowDialog();
+        }
     }
 }
