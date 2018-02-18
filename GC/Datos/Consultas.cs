@@ -62,6 +62,7 @@ namespace Datos
         {
             try
             {
+                texto = texto + "Select @@Identity as id";
                 int iddevuelve = 0;
                 HacerConsulta(texto);
                 lector = comando.ExecuteReader();

@@ -41,7 +41,7 @@ namespace Presentacion
             {
 
                 int idPag = Convert.ToInt32(lector["ID"].ToString());
-                IdPersona = Consultas.DevolverUnString("select IdPersonaRegistrada as n from Persona_Registrada where Identificacion = " + lector["Número de Identificación:"].ToString() + " and Estado is null");
+                IdPersona = Consultas.DevolverUnString("select IdPersonaRegistrada as n from Persona_Registrada where Identificacion = '" + lector["Número de Identificación:"].ToString() + "' and Estado is null");
                 if (IdPersona == "")
                 {
                     //Insertar la persona
@@ -56,7 +56,7 @@ namespace Presentacion
                     string direccion = lector["Dirección de Residencia:"].ToString();
                     string Telefono = lector["Teléfono de Contacto:"].ToString();
                     string Correo = lector["Email:"].ToString();
-                    IdPersona = Consultas.InsertDevovliendoId("insert into Persona_Registrada (Identificacion,PNombre,SNombre,PApellido,SApellido,Genero,Pais,Ciudad,Direccion,Telefono,Correo) values ('" + identificacion + "','" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + Genero + "','" + Pais + "','" + Ciudad + "','" + direccion + "','" + Telefono + "','" + Correo + "');").ToString();
+                    IdPersona = Consultas.InsertDevovliendoId("insert into Persona_Registrada (Identificacion,PNombre,SNombre,PApellido,SApellido,Genero,Pais,Ciudad,Direccion,Telefono,Correo) values ('" + identificacion + "','" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + Genero + "','" + Pais + "','" + Ciudad + "','" + direccion + "','" + Telefono + "','" + Correo + "')").ToString();
                 }
                 //Sigue el proceso
                 
