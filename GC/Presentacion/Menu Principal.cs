@@ -60,5 +60,11 @@ namespace Presentacion
             RegistrarAsesores ra = new RegistrarAsesores();
             ra.ShowDialog();
         }
+
+        private void RegistrarPersonasButton_Click(object sender, EventArgs e)
+        {
+            RegistrarPersonas rp = new RegistrarPersonas();
+            rp.ShowDialog();
+        }
     }
 }

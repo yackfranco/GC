@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.RegistrarPersonasButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +75,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // RegistrarPersonasButton
+            // 
+            this.RegistrarPersonasButton.Location = new System.Drawing.Point(488, 47);
+            this.RegistrarPersonasButton.Name = "RegistrarPersonasButton";
+            this.RegistrarPersonasButton.Size = new System.Drawing.Size(72, 57);
+            this.RegistrarPersonasButton.TabIndex = 2;
+            this.RegistrarPersonasButton.Text = "registrar Personas";
+            this.RegistrarPersonasButton.UseVisualStyleBackColor = true;
+            this.RegistrarPersonasButton.Click += new System.EventHandler(this.RegistrarPersonasButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 383);
+            this.Controls.Add(this.RegistrarPersonasButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button RegistrarPersonasButton;
     }
 }

@@ -21,21 +21,21 @@ namespace Presentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if(CodigoAsesorComboBox.Text == "Codigo")
-            dataGridView1.DataSource = Consultas.devolverTabla("select * from Asesores where CodAsesor like '%"+textBox1.Text+"%'");
+                dataGridView1.DataSource = Consultas.devolverTabla("select CodAsesor,CONCAT(PNombre,' ',SNombre,' ',PApellido,' ',SApellido) as Nombre, Identificacion, Ciudad from asesores where CodAsesor like '%" + textBox1.Text + "%'");
             else
-                dataGridView1.DataSource = Consultas.devolverTabla("select * from Asesores where Identificacion like '%" + textBox1.Text + "%'");
+                dataGridView1.DataSource = Consultas.devolverTabla("select CodAsesor,CONCAT(PNombre,' ',SNombre,' ',PApellido,' ',SApellido) as Nombre, Identificacion, Ciudad from asesores where Identificacion like '%" + textBox1.Text + "%'");
 
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            Variables.codigoAsesor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            this.Close();
+                Variables.codigoAsesor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                this.Close();
         }
 
         private void BuscarAsesor_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Consultas.devolverTabla("select * from Asesores where Identificacion like '%" + textBox1.Text + "%'");
+            dataGridView1.DataSource = Consultas.devolverTabla("select CodAsesor,CONCAT(PNombre,' ',SNombre,' ',PApellido,' ',SApellido) as Nombre, Identificacion, Ciudad from asesores where Identificacion like '%"+textBox1.Text+"%'");
         }
     }
 }

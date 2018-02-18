@@ -69,6 +69,12 @@
     <Compile Include="BuscarAsesor.Designer.cs">
       <DependentUpon>BuscarAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarPersona.Designer.cs">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +102,17 @@
     <Compile Include="RegistrarDiplomados.Designer.cs">
       <DependentUpon>RegistrarDiplomados.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarPersonas.Designer.cs">
+      <DependentUpon>RegistrarPersonas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BuscarAsesor.resx">
       <DependentUpon>BuscarAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarPersona.resx">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Principal.resx">
       <DependentUpon>Menu Principal.cs</DependentUpon>
@@ -119,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarDiplomados.resx">
       <DependentUpon>RegistrarDiplomados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarPersonas.resx">
+      <DependentUpon>RegistrarPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

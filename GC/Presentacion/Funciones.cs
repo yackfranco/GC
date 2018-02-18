@@ -79,15 +79,29 @@ namespace Presentacion
                     codAsesor = Convert.ToInt32(lector["Digite el Codigo del Asesor:"].ToString());
                 }
                 catch (Exception) { }
-
-                Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada,IdDiplomado,CodAsesor, IdCursoG,Pagado, DateCreated, DateUpdated) values (" + idPag + "," + IdPersona + "," + diplomado + "," + codAsesor + "," + curso + ",'false','" + DateTime.Now.ToString("dd-MM-yyyy") + "','" + DateTime.Now.ToString("dd-MM-yyyy") + "')");
-                Consultas.comando.ExecuteNonQuery();
+                
+                //Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada,IdDiplomado,CodAsesor, IdCursoG,Pagado, DateCreated) values (" + idPag + "," + IdPersona + "," + diplomado + "," + codAsesor + "," + curso + ",'false','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                try
+                {
+                    if (diplomado != 0)
+                    {
+                        if (codAsesor != 0)
+                            Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada,IdDiplomado,CodAsesor,Pagado, DateCreated) values (" + idPag + "," + IdPersona + "," + diplomado + "," + codAsesor + ",'false','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                        else
+                            Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada,IdDiplomado,Pagado, DateCreated) values (" + idPag + "," + IdPersona + "," + diplomado + ",'false','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                    }
+                    else
+                    {
+                        Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada, IdCursoG,Pagado, DateCreated) values (" + idPag + "," + IdPersona + "," + curso + ",'false','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                    }
+                    Consultas.comando.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Algun diplomado o Curso no esta registrado en la Base de datos");
+                }
+                
             }
-
-
-
-
-
         }
     }
 }
