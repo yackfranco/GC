@@ -66,5 +66,11 @@ namespace Presentacion
             RegistrarPersonas rp = new RegistrarPersonas();
             rp.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AceptarEstudiante ae = new AceptarEstudiante();
+            ae.ShowDialog();
+        }
     }
 }
