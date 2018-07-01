@@ -32,14 +32,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CodigoAsesorComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(102, 80);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(599, 463);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -65,18 +71,29 @@
             this.CodigoAsesorComboBox.FormattingEnabled = true;
             this.CodigoAsesorComboBox.Items.AddRange(new object[] {
             "Identificación",
-            "Primer Nombre"});
+            "Nombre"});
             this.CodigoAsesorComboBox.Location = new System.Drawing.Point(262, 31);
             this.CodigoAsesorComboBox.Name = "CodigoAsesorComboBox";
             this.CodigoAsesorComboBox.Size = new System.Drawing.Size(121, 21);
             this.CodigoAsesorComboBox.TabIndex = 7;
             this.CodigoAsesorComboBox.Text = "Identificacion";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(722, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Pagó";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AceptarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 565);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CodigoAsesorComboBox);
@@ -96,5 +113,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CodigoAsesorComboBox;
+        private System.Windows.Forms.Button button1;
     }
 }

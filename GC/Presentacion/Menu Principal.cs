@@ -72,5 +72,11 @@ namespace Presentacion
             AceptarEstudiante ae = new AceptarEstudiante();
             ae.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TerminarProceso tp = new TerminarProceso();
+            tp.ShowDialog();
+        }
     }
 }

@@ -34,6 +34,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.RegistrarPersonasButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -96,11 +98,32 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(27, 135);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(72, 57);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Aceptar Estudiante";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(590, 135);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(72, 57);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Terminar Proceso Estudiantes";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 383);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.RegistrarPersonasButton);
             this.Controls.Add(this.button4);
@@ -122,5 +145,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button RegistrarPersonasButton;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
