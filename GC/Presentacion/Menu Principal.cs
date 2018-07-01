@@ -78,5 +78,11 @@ namespace Presentacion
             TerminarProceso tp = new TerminarProceso();
             tp.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Reporte1 r = new Reporte1();
+            r.ShowDialog();
+        }
     }
 }

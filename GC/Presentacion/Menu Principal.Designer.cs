@@ -104,8 +104,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(72, 57);
             this.button6.TabIndex = 4;
-            this.button6.Text = "Aceptar Estudiante";
+            this.button6.Text = "ensayo reporte";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
