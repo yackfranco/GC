@@ -28,12 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AceptarEstudiante));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CodigoAsesorComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panelBuscar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panelBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -41,6 +55,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(102, 80);
             this.dataGridView1.MultiSelect = false;
@@ -51,7 +66,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(411, 31);
+            this.textBox1.Location = new System.Drawing.Point(311, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(271, 20);
             this.textBox1.TabIndex = 9;
@@ -60,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 34);
+            this.label1.Location = new System.Drawing.Point(40, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 13);
             this.label1.TabIndex = 8;
@@ -72,38 +87,127 @@
             this.CodigoAsesorComboBox.Items.AddRange(new object[] {
             "Identificación",
             "Nombre"});
-            this.CodigoAsesorComboBox.Location = new System.Drawing.Point(262, 31);
+            this.CodigoAsesorComboBox.Location = new System.Drawing.Point(162, 20);
             this.CodigoAsesorComboBox.Name = "CodigoAsesorComboBox";
             this.CodigoAsesorComboBox.Size = new System.Drawing.Size(121, 21);
             this.CodigoAsesorComboBox.TabIndex = 7;
             this.CodigoAsesorComboBox.Text = "Identificacion";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(750, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Pagó");
+            this.pictureBox1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Location = new System.Drawing.Point(712, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(184, 265);
+            this.panel2.TabIndex = 12;
+            this.panel2.Visible = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(722, 97);
+            this.button1.Location = new System.Drawing.Point(97, 229);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Pagó";
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Valor Pagado";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(11, 181);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(161, 20);
+            this.textBox3.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Aceptar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 24);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Observaciones";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(11, 28);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(161, 109);
+            this.textBox2.TabIndex = 7;
+            // 
+            // panelBuscar
+            // 
+            this.panelBuscar.Controls.Add(this.textBox1);
+            this.panelBuscar.Controls.Add(this.label1);
+            this.panelBuscar.Controls.Add(this.CodigoAsesorComboBox);
+            this.panelBuscar.Location = new System.Drawing.Point(100, 11);
+            this.panelBuscar.Name = "panelBuscar";
+            this.panelBuscar.Size = new System.Drawing.Size(612, 55);
+            this.panelBuscar.TabIndex = 13;
             // 
             // AceptarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 565);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CodigoAsesorComboBox);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(908, 565);
+            this.Controls.Add(this.panelBuscar);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AceptarEstudiante";
             this.Text = "AceptarEstudiante";
             this.Load += new System.EventHandler(this.AceptarEstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelBuscar.ResumeLayout(false);
+            this.panelBuscar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -113,6 +217,15 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CodigoAsesorComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panelBuscar;
         private System.Windows.Forms.Button button1;
     }
 }

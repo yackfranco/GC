@@ -95,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Liquidar Asesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidar Asesores.Designer.cs">
+      <DependentUpon>Liquidar Asesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="TerminarProceso.Designer.cs">
       <DependentUpon>TerminarProceso.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerDetallesAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDetallesAsesor.Designer.cs">
+      <DependentUpon>VerDetallesAsesor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AceptarEstudiante.resx">
       <DependentUpon>AceptarEstudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="configurarPagos.resx">
       <DependentUpon>configurarPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidar Asesores.resx">
+      <DependentUpon>Liquidar Asesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Principal.resx">
       <DependentUpon>Menu Principal.cs</DependentUpon>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TerminarProceso.resx">
       <DependentUpon>TerminarProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDetallesAsesor.resx">
+      <DependentUpon>VerDetallesAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatosBDDataSet.xsc">
       <DependentUpon>DatosBDDataSet.xsd</DependentUpon>

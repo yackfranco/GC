@@ -28,75 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.RegistrarPersonasButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarAplicativoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDiplomadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarCursosGratuitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarAsesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.concluirProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.liquidarAsesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(27, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 57);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Actualizar Base de Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(165, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 57);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "registrar Diplomados";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(269, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 57);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "registrar Cursos Gratuitos";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(373, 47);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 57);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "registrar Asesores";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // RegistrarPersonasButton
-            // 
-            this.RegistrarPersonasButton.Location = new System.Drawing.Point(488, 47);
-            this.RegistrarPersonasButton.Name = "RegistrarPersonasButton";
-            this.RegistrarPersonasButton.Size = new System.Drawing.Size(72, 57);
-            this.RegistrarPersonasButton.TabIndex = 2;
-            this.RegistrarPersonasButton.Text = "registrar Personas";
-            this.RegistrarPersonasButton.UseVisualStyleBackColor = true;
-            this.RegistrarPersonasButton.Click += new System.EventHandler(this.RegistrarPersonasButton_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(590, 47);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 57);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Aceptar Estudiante";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -108,45 +61,175 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // menuStrip1
             // 
-            this.button7.Location = new System.Drawing.Point(590, 135);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(72, 57);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Terminar Proceso Estudiantes";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.configuraciónToolStripMenuItem,
+            this.procesosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(776, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizarBaseDeDatosToolStripMenuItem,
+            this.acercaDeToolStripMenuItem,
+            this.cerrarAplicativoToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // actualizarBaseDeDatosToolStripMenuItem
+            // 
+            this.actualizarBaseDeDatosToolStripMenuItem.Name = "actualizarBaseDeDatosToolStripMenuItem";
+            this.actualizarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.actualizarBaseDeDatosToolStripMenuItem.Text = "Actualizar Base de Datos";
+            this.actualizarBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.actualizarBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.acercaDeToolStripMenuItem.Text = "Acerca De...";
+            // 
+            // cerrarAplicativoToolStripMenuItem
+            // 
+            this.cerrarAplicativoToolStripMenuItem.Name = "cerrarAplicativoToolStripMenuItem";
+            this.cerrarAplicativoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.cerrarAplicativoToolStripMenuItem.Text = "Cerrar Aplicativo";
+            // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarDiplomadosToolStripMenuItem,
+            this.registrarCursosGratuitosToolStripMenuItem,
+            this.registrarAsesoresToolStripMenuItem,
+            this.registrarPersonasToolStripMenuItem});
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            // 
+            // registrarDiplomadosToolStripMenuItem
+            // 
+            this.registrarDiplomadosToolStripMenuItem.Name = "registrarDiplomadosToolStripMenuItem";
+            this.registrarDiplomadosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.registrarDiplomadosToolStripMenuItem.Text = "Registrar Diplomados";
+            this.registrarDiplomadosToolStripMenuItem.Click += new System.EventHandler(this.registrarDiplomadosToolStripMenuItem_Click);
+            // 
+            // registrarCursosGratuitosToolStripMenuItem
+            // 
+            this.registrarCursosGratuitosToolStripMenuItem.Name = "registrarCursosGratuitosToolStripMenuItem";
+            this.registrarCursosGratuitosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.registrarCursosGratuitosToolStripMenuItem.Text = "Registrar Cursos Gratuitos";
+            this.registrarCursosGratuitosToolStripMenuItem.Click += new System.EventHandler(this.registrarCursosGratuitosToolStripMenuItem_Click);
+            // 
+            // registrarAsesoresToolStripMenuItem
+            // 
+            this.registrarAsesoresToolStripMenuItem.Name = "registrarAsesoresToolStripMenuItem";
+            this.registrarAsesoresToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.registrarAsesoresToolStripMenuItem.Text = "Registrar Asesores";
+            this.registrarAsesoresToolStripMenuItem.Click += new System.EventHandler(this.registrarAsesoresToolStripMenuItem_Click);
+            // 
+            // registrarPersonasToolStripMenuItem
+            // 
+            this.registrarPersonasToolStripMenuItem.Name = "registrarPersonasToolStripMenuItem";
+            this.registrarPersonasToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.registrarPersonasToolStripMenuItem.Text = "Registrar Personas";
+            this.registrarPersonasToolStripMenuItem.Click += new System.EventHandler(this.registrarPersonasToolStripMenuItem_Click);
+            // 
+            // procesosToolStripMenuItem
+            // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarPersonaToolStripMenuItem,
+            this.concluirProcesoToolStripMenuItem,
+            this.liquidarAsesoresToolStripMenuItem});
+            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // registrarPersonaToolStripMenuItem
+            // 
+            this.registrarPersonaToolStripMenuItem.Name = "registrarPersonaToolStripMenuItem";
+            this.registrarPersonaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.registrarPersonaToolStripMenuItem.Text = "Aceptar Matricula ";
+            this.registrarPersonaToolStripMenuItem.Click += new System.EventHandler(this.registrarPersonaToolStripMenuItem_Click);
+            // 
+            // concluirProcesoToolStripMenuItem
+            // 
+            this.concluirProcesoToolStripMenuItem.Name = "concluirProcesoToolStripMenuItem";
+            this.concluirProcesoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.concluirProcesoToolStripMenuItem.Text = "Concluir Proceso ";
+            this.concluirProcesoToolStripMenuItem.Click += new System.EventHandler(this.concluirProcesoToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(105, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(545, 322);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Datos Importados Correctamente";
+            this.notifyIcon1.BalloonTipTitle = "EXITO";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // liquidarAsesoresToolStripMenuItem
+            // 
+            this.liquidarAsesoresToolStripMenuItem.Name = "liquidarAsesoresToolStripMenuItem";
+            this.liquidarAsesoresToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.liquidarAsesoresToolStripMenuItem.Text = "Liquidar Asesores";
+            this.liquidarAsesoresToolStripMenuItem.Click += new System.EventHandler(this.liquidarAsesoresToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 383);
-            this.Controls.Add(this.button7);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(776, 483);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.RegistrarPersonasButton);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button RegistrarPersonasButton;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarDiplomadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarCursosGratuitosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarAsesoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarPersonasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarPersonaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarAplicativoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem concluirProcesoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripMenuItem liquidarAsesoresToolStripMenuItem;
     }
 }

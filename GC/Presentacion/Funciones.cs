@@ -11,8 +11,9 @@ namespace Presentacion
 {
     class Funciones
     {
-        public void actualizarBaseDatos(string archivo)
+        public void actualizarBaseDatos(string archivo, Form1 f)
         {
+            Cursor.Current = Cursors.WaitCursor;
             string cadenaConexionExcel = "provider=Microsoft.ACE.OLEDB.12.0;Data Source='" + archivo + "';Extended Properties=Excel 12.0;";
             OleDbConnection conexionExcel = new OleDbConnection(cadenaConexionExcel);
 
@@ -59,9 +60,9 @@ namespace Presentacion
                     IdPersona = Consultas.InsertDevovliendoId("insert into Persona_Registrada (Identificacion,PNombre,SNombre,PApellido,SApellido,Genero,Pais,Ciudad,Direccion,Telefono,Correo) values ('" + identificacion + "','" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + Genero + "','" + Pais + "','" + Ciudad + "','" + direccion + "','" + Telefono + "','" + Correo + "')").ToString();
                 }
                 //Sigue el proceso
-                
-                int diplomado =0;
-                int curso= 0; 
+
+                int diplomado = 0;
+                int curso = 0;
                 try
                 {
                     diplomado = Convert.ToInt32(lector["Nombre del Diplomado Virtual a realizar:"].ToString());
@@ -79,7 +80,7 @@ namespace Presentacion
                     codAsesor = Convert.ToInt32(lector["Digite el Codigo del Asesor:"].ToString());
                 }
                 catch (Exception) { }
-                
+
                 //Consultas.HacerConsulta("insert into Diplo_Cursos (IdPag,IdPersonaRegistrada,IdDiplomado,CodAsesor, IdCursoG,Pagado, DateCreated) values (" + idPag + "," + IdPersona + "," + diplomado + "," + codAsesor + "," + curso + ",'false','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
                 try
                 {
@@ -100,8 +101,12 @@ namespace Presentacion
                 {
                     MessageBox.Show("Algun diplomado o Curso no esta registrado en la Base de datos");
                 }
-                
+
             }
+            conexionExcel.Close();
+            f.notifyIcon1.Visible = true;
+            f.notifyIcon1.ShowBalloonTip(400);
+            Cursor.Current = Cursors.Default;
         }
     }
 }
