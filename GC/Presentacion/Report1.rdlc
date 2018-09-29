@@ -348,11 +348,11 @@
           </Border>
         </Style>
       </Image>
-      <Image Name="Image4">
+      <Image Name="Image3">
         <Source>Embedded</Source>
-        <Value>Screenshot_3</Value>
+        <Value>Screenshot_2</Value>
         <Sizing>FitProportional</Sizing>
-        <Height>5.15038cm</Height>
+        <Height>5.32677cm</Height>
         <Width>27.94cm</Width>
         <ZIndex>11</ZIndex>
         <Style>

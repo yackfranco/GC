@@ -44,9 +44,10 @@
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.concluirProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.liquidarAsesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.liquidarAsesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarParametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +109,8 @@
             this.registrarDiplomadosToolStripMenuItem,
             this.registrarCursosGratuitosToolStripMenuItem,
             this.registrarAsesoresToolStripMenuItem,
-            this.registrarPersonasToolStripMenuItem});
+            this.registrarPersonasToolStripMenuItem,
+            this.configurarParametrosToolStripMenuItem});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
             this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
@@ -165,6 +167,13 @@
             this.concluirProcesoToolStripMenuItem.Text = "Concluir Proceso ";
             this.concluirProcesoToolStripMenuItem.Click += new System.EventHandler(this.concluirProcesoToolStripMenuItem_Click);
             // 
+            // liquidarAsesoresToolStripMenuItem
+            // 
+            this.liquidarAsesoresToolStripMenuItem.Name = "liquidarAsesoresToolStripMenuItem";
+            this.liquidarAsesoresToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.liquidarAsesoresToolStripMenuItem.Text = "Liquidar Asesores";
+            this.liquidarAsesoresToolStripMenuItem.Click += new System.EventHandler(this.liquidarAsesoresToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -183,12 +192,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // liquidarAsesoresToolStripMenuItem
+            // configurarParametrosToolStripMenuItem
             // 
-            this.liquidarAsesoresToolStripMenuItem.Name = "liquidarAsesoresToolStripMenuItem";
-            this.liquidarAsesoresToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.liquidarAsesoresToolStripMenuItem.Text = "Liquidar Asesores";
-            this.liquidarAsesoresToolStripMenuItem.Click += new System.EventHandler(this.liquidarAsesoresToolStripMenuItem_Click);
+            this.configurarParametrosToolStripMenuItem.Name = "configurarParametrosToolStripMenuItem";
+            this.configurarParametrosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.configurarParametrosToolStripMenuItem.Text = "Configurar Parametros";
+            this.configurarParametrosToolStripMenuItem.Click += new System.EventHandler(this.configurarParametrosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -231,5 +240,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolStripMenuItem liquidarAsesoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurarParametrosToolStripMenuItem;
     }
 }

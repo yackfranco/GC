@@ -103,5 +103,11 @@ namespace Presentacion
             Liquidar_Asesores la = new Liquidar_Asesores();
             la.ShowDialog();
         }
+
+        private void configurarParametrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Parametros pa = new Parametros();
+            pa.ShowDialog();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,8 @@ namespace Presentacion
         public void Cargartablas()
         {
 
-
+            dataGridViewLiquidar.Rows.Clear();
+            dataGridViewTodos.Rows.Clear();
             Consultas.HacerConsulta("SELECT        dbo.Asesores.Identificacion, dbo.Asesores.CodAsesor, CONCAT(dbo.Asesores.PNombre,' ',dbo.Asesores.SNombre ,' ', dbo.Asesores.PApellido,' ',dbo.Asesores.SApellido) as NombreAsesor , SUM(dbo.Diplomado_pagado.ValorDiplomado) AS Vendido, SUM(dbo.Diplomado_pagado.ComisionAsesor) as comision FROM            dbo.Asesores INNER JOIN dbo.Diplomado_pagado ON dbo.Asesores.CodAsesor = dbo.Diplomado_pagado.CodigoAsesor WHERE        (dbo.Diplomado_pagado.estadoLiquidacion IS NULL) GROUP BY dbo.Asesores.Identificacion, dbo.Asesores.CodAsesor, dbo.Asesores.PNombre, dbo.Asesores.PApellido, dbo.Asesores.SNombre, dbo.Asesores.SApellido");
             Consultas.lector = Consultas.comando.ExecuteReader();
             while (Consultas.lector.Read())
@@ -80,6 +82,29 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("No se ha seleccionado ningun Asesor");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!(dataGridViewLiquidar.Rows.Count>0))
+            {
+                MessageBox.Show("no se ha elegido ningun asesor");
+                return;
+            }
+            //if (MessageBox.Show("Esta seguro de pagarle " + dataGridViewLiquidar.CurrentRow.Cells[4].Value.ToString() + " al Asesor " + dataGridViewLiquidar.CurrentRow.Cells[2].Value.ToString() + "")) ;
+            double pagar = Convert.ToDouble(dataGridViewLiquidar.CurrentRow.Cells[4].Value.ToString());
+            if (MessageBox.Show("Asesor: " + dataGridViewLiquidar.CurrentRow.Cells[2].Value.ToString() + "\nPagar:   " + pagar.ToString("C", new CultureInfo("es-CO")) + "\n¿ Esta seguro de Pagar al Asesor ?", "PAGAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                dataGridViewLiquidar.Enabled = false;
+                Consultas.HacerConsulta("Update Diplomado_pagado set estadoLiquidacion = 'True' where CodigoAsesor = " + dataGridViewLiquidar.CurrentRow.Cells[1].Value.ToString() + " and estadoLiquidacion is null");
+                Consultas.comando.ExecuteNonQuery();
+                Consultas.HacerConsulta("insert into Asesor_Pago (CodAsesor,FechaConsignacion, ValorPagado) values (" + dataGridViewLiquidar.CurrentRow.Cells[1].Value.ToString() + ",'"+DateTime.Now.ToString("yyyy-MM-dd")+"',"+pagar+")");
+                Consultas.comando.ExecuteNonQuery();
+                Cargartablas();
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Transaccion Realizada Con Exito","Correcto");
             }
         }
 

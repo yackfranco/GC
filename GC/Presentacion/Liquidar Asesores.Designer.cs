@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.TabPage2 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewTodos = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridViewLiquidar = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Identificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodAsesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreAsesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comision1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewLiquidar = new System.Windows.Forms.DataGridView();
+            this.Identificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodAsesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreAsesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTodos)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -64,6 +64,16 @@
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "Otros Asesores";
             this.TabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(798, 396);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 40);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Ver Detalles del Asesor";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewTodos
             // 
@@ -85,79 +95,6 @@
             this.dataGridViewTodos.ReadOnly = true;
             this.dataGridViewTodos.Size = new System.Drawing.Size(871, 350);
             this.dataGridViewTodos.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.dataGridViewLiquidar);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(900, 460);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Liquidar";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewLiquidar
-            // 
-            this.dataGridViewLiquidar.AllowUserToAddRows = false;
-            this.dataGridViewLiquidar.AllowUserToDeleteRows = false;
-            this.dataGridViewLiquidar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewLiquidar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLiquidar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Identificacion,
-            this.CodAsesor,
-            this.NombreAsesor,
-            this.Vendido,
-            this.Comision});
-            this.dataGridViewLiquidar.Location = new System.Drawing.Point(23, 6);
-            this.dataGridViewLiquidar.Name = "dataGridViewLiquidar";
-            this.dataGridViewLiquidar.ReadOnly = true;
-            this.dataGridViewLiquidar.Size = new System.Drawing.Size(869, 348);
-            this.dataGridViewLiquidar.TabIndex = 0;
-            this.dataGridViewLiquidar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.TabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(908, 486);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // Identificacion
-            // 
-            this.Identificacion.HeaderText = "Identificación";
-            this.Identificacion.Name = "Identificacion";
-            this.Identificacion.ReadOnly = true;
-            // 
-            // CodAsesor
-            // 
-            this.CodAsesor.HeaderText = "CodigoAsesor";
-            this.CodAsesor.Name = "CodAsesor";
-            this.CodAsesor.ReadOnly = true;
-            // 
-            // NombreAsesor
-            // 
-            this.NombreAsesor.HeaderText = "NombreAsesor";
-            this.NombreAsesor.Name = "NombreAsesor";
-            this.NombreAsesor.ReadOnly = true;
-            // 
-            // Vendido
-            // 
-            this.Vendido.HeaderText = "Vendido";
-            this.Vendido.Name = "Vendido";
-            this.Vendido.ReadOnly = true;
-            // 
-            // Comision
-            // 
-            this.Comision.HeaderText = "Comision a Pagar";
-            this.Comision.Name = "Comision";
-            this.Comision.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -189,14 +126,18 @@
             this.comision1.Name = "comision1";
             this.comision1.ReadOnly = true;
             // 
-            // button1
+            // tabPage1
             // 
-            this.button1.Location = new System.Drawing.Point(42, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.dataGridViewLiquidar);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(900, 460);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Liquidar";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -208,15 +149,75 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(798, 396);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Ver Detalles del Asesor";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(40, 385);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Liquidar Pago Asesor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridViewLiquidar
+            // 
+            this.dataGridViewLiquidar.AllowUserToAddRows = false;
+            this.dataGridViewLiquidar.AllowUserToDeleteRows = false;
+            this.dataGridViewLiquidar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLiquidar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLiquidar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Identificacion,
+            this.CodAsesor,
+            this.NombreAsesor,
+            this.Vendido,
+            this.Comision});
+            this.dataGridViewLiquidar.Location = new System.Drawing.Point(23, 6);
+            this.dataGridViewLiquidar.Name = "dataGridViewLiquidar";
+            this.dataGridViewLiquidar.ReadOnly = true;
+            this.dataGridViewLiquidar.Size = new System.Drawing.Size(869, 348);
+            this.dataGridViewLiquidar.TabIndex = 0;
+            this.dataGridViewLiquidar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Identificacion
+            // 
+            this.Identificacion.HeaderText = "Identificación";
+            this.Identificacion.Name = "Identificacion";
+            this.Identificacion.ReadOnly = true;
+            // 
+            // CodAsesor
+            // 
+            this.CodAsesor.HeaderText = "CodigoAsesor";
+            this.CodAsesor.Name = "CodAsesor";
+            this.CodAsesor.ReadOnly = true;
+            // 
+            // NombreAsesor
+            // 
+            this.NombreAsesor.HeaderText = "NombreAsesor";
+            this.NombreAsesor.Name = "NombreAsesor";
+            this.NombreAsesor.ReadOnly = true;
+            // 
+            // Vendido
+            // 
+            this.Vendido.HeaderText = "Vendido";
+            this.Vendido.Name = "Vendido";
+            this.Vendido.ReadOnly = true;
+            // 
+            // Comision
+            // 
+            this.Comision.HeaderText = "Comision a Pagar";
+            this.Comision.Name = "Comision";
+            this.Comision.ReadOnly = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.TabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(908, 486);
+            this.tabControl1.TabIndex = 0;
             // 
             // Liquidar_Asesores
             // 

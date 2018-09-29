@@ -114,6 +114,12 @@
     <Compile Include="PagarAsesores.Designer.cs">
       <DependentUpon>PagarAsesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametros.Designer.cs">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarAsesores.cs">
@@ -179,6 +185,9 @@
     <EmbeddedResource Include="PagarAsesores.resx">
       <DependentUpon>PagarAsesores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parametros.resx">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -201,7 +210,6 @@
       <DependentUpon>RegistrarPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Reporte1.resx">
       <DependentUpon>Reporte1.cs</DependentUpon>
     </EmbeddedResource>
